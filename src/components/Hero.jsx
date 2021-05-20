@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import Button from './Button';
 import {HeroSection, HeroWrapper, HeroSlide, HeroSlider, HeroImage, HeroContent, Arrow, SliderButtons, PrevArrow, NextArrow } from '../styles/HeroSlideStyles';
 
+
 const Hero = ({slides}) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;

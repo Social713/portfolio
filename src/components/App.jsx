@@ -5,7 +5,7 @@ import Hero from './Hero';
 import Navbar from './Navbar';
 import Dropdown from './Dropdown';
 import InfoSection from './InfoSection';
-import { InfoData } from '../data/InfoData';
+import { InfoData, InfoData2 } from '../data/InfoData';
 
 
 const App = () => {
@@ -23,7 +23,8 @@ const App = () => {
             <Navbar toggle={toggle}/>
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero slides={SliderData}/>
-            <InfoSection {...InfoData} />
+            <InfoSection info = {InfoData} />
+            
         </>
     )
 }

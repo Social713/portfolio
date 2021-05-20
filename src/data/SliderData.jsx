@@ -16,7 +16,7 @@ export const SliderData = [
     {
         name: "Opulent Beauty and Wellness", 
         title: 'Portfolio',
-        path: 'https://www.opulentbeautyandwellness.com',
+        path: '/business',
         label: 'View Project', 
         image: BusinessSite,
         alt: 'Picture of business page'
