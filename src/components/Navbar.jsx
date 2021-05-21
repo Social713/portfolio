@@ -9,7 +9,11 @@ const Navbar = ({toggle}) => {
     const [navbar, setNavbar] = useState('transparent');
 
     const changeOnScroll =()=>{
-        window.scrollY >= 875 ? setNavbar('black') : setNavbar('transparent');
+        if (window.scrollY >= 875){
+            setNavbar('black')
+        } else{
+            setNavbar('transparent');
+        } 
     }
     window.addEventListener('scroll', changeOnScroll);
 
