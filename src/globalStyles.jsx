@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
     html, body {
         overflow-x: hidden;
     }
+    html{
+        min-height: 100%;
+        position:relative;
+    }
 `;
 
 export default GlobalStyles;

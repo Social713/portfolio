@@ -1,7 +1,7 @@
-import David from '../images/David.jpeg';
-import BusinessSite from '../images/BusinessPage.png';
+import Laptop from '../images/Laptop.jpeg';
+import SmallBusiness from '../images/SmallBusiness.jpeg';
 import BlackJack from '../images/BlackJack.png';
-import ComingSoon from '../images/ComingSoon.jpeg';
+import Blog from '../images/Blog.jpeg';
 
 
 export const SliderData = [
@@ -10,15 +10,15 @@ export const SliderData = [
         title: 'Software Engineer',
         path: '/about',
         label: 'Who am I?', 
-        image: David,
+        image: Laptop,
         alt: 'Picture of David'
     },
     {
-        name: "Opulent Beauty and Wellness", 
-        title: 'Portfolio',
+        name: "Helping Businesses", 
+        title: 'Go online',
         path: '/business',
-        label: 'View Project', 
-        image: BusinessSite,
+        label: 'View Work', 
+        image: SmallBusiness,
         alt: 'Picture of business page'
     },
     {
@@ -31,10 +31,10 @@ export const SliderData = [
     },
     {
         name: "Blog", 
-        title: 'Portfolio',
+        title: 'To share my journey',
         path: '/portfolio',
-        label: 'View Project', 
-        image: ComingSoon,
+        label: 'Coming Soon', 
+        image: Blog,
         alt: 'Picture of Blogsite'
     }
 ]

@@ -7,13 +7,10 @@ import {Nav, Logo, MenuBars, NavMenu, NavMenuLinks, NavBtn} from '../styles/Navb
 const Navbar = ({toggle}) => {
     // color change on scroll
     const [navbar, setNavbar] = useState('transparent');
-
+    //const [underline, setUnderline] = useState('none');
     const changeOnScroll =()=>{
-        if (window.scrollY >= 875){
-            setNavbar('black')
-        } else{
-            setNavbar('transparent');
-        } 
+        window.scrollY >= 875 ? setNavbar('black') : setNavbar('transparent');
+        //window.scrollY >= 875 && setUnderline('underline');
     }
     window.addEventListener('scroll', changeOnScroll);
 
