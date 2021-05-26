@@ -78,13 +78,13 @@ export const Gallery=()=> {
     // The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
     const scrollingElement = window;
 
-    return (
-      <ProGallery
+    return (<div>
+      <ProGallery 
         items={items}
         options={options}
         container={container}
         eventsListener={eventsListener}
         scrollingElement={scrollingElement}
-      />
+      /></div>
     );
   }

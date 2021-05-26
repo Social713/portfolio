@@ -8,6 +8,8 @@ import InfoSection1 from './InfoSection1';
 import ProjectSection from './ProjectSection';
 import { InfoData, InfoData2 } from '../data/InfoData';
 import { Footer } from './Footer';
+import { Gallery1 } from './Gallery1';
+
 
 const App = () => {
 
@@ -25,7 +27,7 @@ const App = () => {
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero slides={SliderData}/>
             <InfoSection1 info = {InfoData} />
-            <ProjectSection info = {InfoData2} />
+            <Gallery1 info = {InfoData2}  />
             <Footer />
         </>
     )

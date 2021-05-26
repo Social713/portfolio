@@ -13,6 +13,7 @@ const ProjectSection = ({info}) => {
     return (
         <ThirdSection>
     
+            <h1>Portfolio</h1>
             <Container data-aos={"zoom-out-right"} >
                 <Gallery />
             </Container>

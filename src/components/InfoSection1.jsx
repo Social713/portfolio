@@ -35,7 +35,7 @@ const InfoSection1 = ({info}) => {
                 </LogoTitle>
                 </ImageColumn>      
             </Container>)
-    })};
+    })}
                 </Section>
     );
 };
