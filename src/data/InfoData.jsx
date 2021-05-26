@@ -18,15 +18,17 @@ export const InfoData = [{
 // 2nd section
 export const InfoData2 = [{
     heading: "Opulent Beauty and Wellness",
-    paragraphOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    paragraphOne: 'Helping a small business get off the ground and do what it loves.',
     image: SmallBusiness,
     animation: "zoom-out-right",
+    technologies: "HTML CSS"
 },
 {
     heading: "Blog",
     paragraphOne: 'Coming Soon...',
     image: Blog,
     animation: "zoom-out",
+    technologies: "React"
 
 },
 {
@@ -34,6 +36,7 @@ export const InfoData2 = [{
     paragraphOne: '	A card game in which the object is to accumulate cards with a higher count than that of the dealer but not exceeding 21. Try man vs computer!',
     image: BlackJack,
     animation: "zoom-out-left",
+    technologies: "HTML CSS Javascript"
 },
 ];
 

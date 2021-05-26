@@ -69,14 +69,11 @@ export const Gallery1 =({info})=> {
 
       </CardActionArea>
 
-      {/* <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions> */}
+      <CardActions>
+        <Typography color="textSecondary" component="p" >
+          {data.technologies}
+        </Typography>
+      </CardActions>
     </Card>
     
     </Grid>

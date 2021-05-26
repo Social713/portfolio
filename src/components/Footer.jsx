@@ -18,7 +18,7 @@ const Foot = styled.div`
     p{
         padding-top: 20px;
         color: grey;
-       
+        font-size: 14px;
     }
 `;
 
