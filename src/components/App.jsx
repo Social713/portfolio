@@ -5,7 +5,6 @@ import Hero from './Hero';
 import Navbar from './Navbar';
 import Dropdown from './Dropdown';
 import InfoSection1 from './InfoSection1';
-import ProjectSection from './ProjectSection';
 import { InfoData, InfoData2 } from '../data/InfoData';
 import { Footer } from './Footer';
 import { Gallery1 } from './Gallery1';

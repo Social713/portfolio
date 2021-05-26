@@ -43,12 +43,12 @@ export const Gallery1 =({info})=> {
       <Header>
       <h1>Portfolio</h1>
       </Header>
-      <Grid container >
+      <Box mb={15} ml={5} style={{display: 'inline-block'}}>
+      <Grid container spacing={4} >
       {info.map((data)=>{
         return( 
-      <Box mb={15} ml={5} style={{display: 'inline-block'}}>
       <Grid item >
-    <Card className={classes.root} data-aos={"zoom-out-right"} >
+    <Card className={classes.root} data-aos={data.animation} >
 
       <CardActionArea>
 
@@ -69,20 +69,20 @@ export const Gallery1 =({info})=> {
 
       </CardActionArea>
 
-      <CardActions>
+      {/* <CardActions>
         <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
     
     </Grid>
-    </Box>
         )})}
     </Grid>
+    </Box>
     </>
   );
 }
