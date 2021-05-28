@@ -23,11 +23,17 @@ const useStyles = makeStyles({
   },
 });
 
-const Header = styled.div`
+const Styles = styled.div`
     padding-bottom: 5%;
 
     h1{
         text-align: center;
+        padding-bottom: 7%;
+    }
+    p{
+        color: grey;
+        font-size: 14px;
+
     }
 `;
 
@@ -40,9 +46,9 @@ export const Gallery1 =({info})=> {
   }, []);
   return (
       <>
-      <Header>
+      <Styles>
       <h1>Portfolio</h1>
-      </Header>
+      
       <Box mb={15} ml={5} style={{display: 'inline-block'}}>
       <Grid container spacing={4} >
       {info.map((data)=>{
@@ -51,11 +57,19 @@ export const Gallery1 =({info})=> {
     <Card className={classes.root} data-aos={data.animation} >
 
       <CardActionArea>
-
+      {/* <ButtonBase
+          focusRipple
+          key={data.title}
+          className={classes.image}
+          focusVisibleClassName={classes.focusVisible}
+          style={{
+            width: data.width,
+          }}
+        > */}
         <CardMedia
           className={classes.media}
           image={data.image}
-          title="Contemplative Reptile"
+          title={data.heading}
         />
             
         <CardContent>
@@ -67,12 +81,13 @@ export const Gallery1 =({info})=> {
           </Typography>
         </CardContent>
 
+        {/* </ButtonBase> */}
       </CardActionArea>
 
       <CardActions>
-        <Typography color="textSecondary" component="p" >
+        <p>
           {data.technologies}
-        </Typography>
+        </p>
       </CardActions>
     </Card>
     
@@ -80,6 +95,7 @@ export const Gallery1 =({info})=> {
         )})}
     </Grid>
     </Box>
+    </Styles>
     </>
   );
 }
