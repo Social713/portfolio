@@ -12,7 +12,7 @@ const InfoSection1 = ({info}) => {
         });
       }, []);
     return (
-        <Section>
+        <Section id="about">
         {info.map((data, index)=>{
         return (
             <Container key={index}>

@@ -1,8 +1,9 @@
 import David from '../images/David.jpeg';
-import SmallBusiness from '../images/SmallBusiness.jpeg';
+import BusinessPage from '../images/BusinessPage.png';
 import Blog from '../images/Blog.jpeg';
 import BJJ from '../images/BJJ.jpg';
 import BlackJack from '../images/BlackJack.png';
+import Newsletter from '../images/Newsletter.jpeg';
 
 // 1st section
 export const InfoData = [{
@@ -19,7 +20,7 @@ export const InfoData = [{
 export const InfoData2 = [{
     heading: "Opulent Beauty and Wellness",
     paragraphOne: 'Helping a small business get off the ground and do what it loves.',
-    image: SmallBusiness,
+    image: BusinessPage,
     animation: "zoom-out-right",
     technologies: "HTML CSS"
 },
@@ -36,7 +37,14 @@ export const InfoData2 = [{
     paragraphOne: '	A card game in which the object is to accumulate cards with a higher count than that of the dealer but not exceeding 21. Try man vs computer!',
     image: BlackJack,
     animation: "zoom-out-left",
-    technologies: "HTML CSS Javascript"
+    technologies: "Javascript HTML CSS "
+},
+{
+    heading: "Newsletter",
+    paragraphOne: `Email users a newsletter using Mailchimp's API`,
+    image: Newsletter,
+    animation: "zoom-out-right",
+    technologies: "Javascript HTML CSS Bootstrap"
 },
 ];
 

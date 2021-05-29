@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { menuData } from '../data/MenuData';
 import Button from './Button';
-import {Nav, Logo, MenuBars, NavMenu, NavMenuLinks, NavBtn} from '../styles/NavbarStyles';
-
+import {Nav, Logo, MenuBars, NavMenu, NavLinks, NavBtn} from '../styles/NavbarStyles';
+import { Link, animateScroll as scroll } from "react-scroll";
+import { Gallery1 } from './Gallery1';
 
 const Navbar = ({toggle}) => {
     // color change on scroll
@@ -20,9 +21,10 @@ const Navbar = ({toggle}) => {
             <MenuBars onClick={toggle} />
             <NavMenu>
                 {menuData.map((item, index)=>(
-                    (<NavMenuLinks to={item.link} key={index}>
+                    (<Link activeClass="active" spy={true} smooth={true} offset={-60} duration={1000} to={item.link} key={index}>
                         {item.title}
-                    </NavMenuLinks>)
+                    </Link>)
+                    
                 ))}
             </NavMenu>
             <NavBtn>

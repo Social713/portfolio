@@ -41,13 +41,13 @@ export const Gallery1 =({info})=> {
   const classes = useStyles();
   useEffect(() => {
     AOS.init({
-      duration : 2000
+      duration : 1500
     });
   }, []);
   return (
       <>
       <Styles>
-      <h1>Portfolio</h1>
+      <h1 id="portfolioSection">Portfolio</h1>
       
       <Box mb={15} ml={5} style={{display: 'inline-block'}}>
       <Grid container spacing={4} >

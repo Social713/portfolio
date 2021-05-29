@@ -27,6 +27,9 @@ export const Footer = () => {
     return (
         <Foot>
             <p>DAVID ROGERS © {date}</p>
+            {/* <div>
+            <p>made with React</p>
+            </div> */}
         </Foot>
     )
 }
