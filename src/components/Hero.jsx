@@ -34,7 +34,7 @@ const Hero = ({slides}) => {
     }
 
     return (
-        <HeroSection>
+        <HeroSection id="slideshow">
             <HeroWrapper>
                 {slides.map((slide, index)=>{
                     return (

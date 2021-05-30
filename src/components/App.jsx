@@ -7,8 +7,8 @@ import Dropdown from './Dropdown';
 import InfoSection1 from './InfoSection1';
 import { InfoData, InfoData2 } from '../data/InfoData';
 import { Footer } from './Footer';
-import { Gallery1 } from './Gallery1';
-
+import { PortfolioSection } from './PortfolioSection';
+import ContactForm from './ContactForm';
 
 const App = () => {
 
@@ -19,6 +19,13 @@ const App = () => {
         setIsOpen(!isOpen);
     }
 
+    // For the contact form
+    const [contact, setContact] = useState(false);
+
+    const contactToggle = () => {
+        setContact(!contact)
+    }
+
     return (
         <>
             <GlobalStyles />
@@ -26,7 +33,8 @@ const App = () => {
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero slides={SliderData}/>
             <InfoSection1 info = {InfoData} />
-            <Gallery1 info = {InfoData2}  />
+            <PortfolioSection info = {InfoData2}  />
+            <ContactForm contact={contact} contactToggle={contactToggle} />
             <Footer />
         </>
     )
