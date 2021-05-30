@@ -10,7 +10,7 @@ export const Section = styled.section`
     `;
 
 export const Container = styled.div`
-    padding: 3% 5% 2% 5%;
+    padding: 3% 3% 2% 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 800px;

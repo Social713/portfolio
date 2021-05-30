@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
 const ContactForm = ({contact, contactToggle}) =>{
         const classes = useStyles();
     return (
-        <Popup contact={contact} contactToggle={contactToggle}>
-            <Form contactToggle={contactToggle}>
+        <Popup contact={contact} onClick={contactToggle}>
+            <Form onClick={contactToggle}>
                 <form className={classes.root} noValidate autoComplete="off">
                     <TextField required id="standard-required" label="Name" defaultValue="" />
                     <TextField required id="standard-required" label="Email Address" defaultValue="" />
@@ -28,6 +28,5 @@ const ContactForm = ({contact, contactToggle}) =>{
         </Popup>
     )
 }
-
 
 export default ContactForm;

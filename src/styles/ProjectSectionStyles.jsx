@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const ThirdSection = styled.section`
     width: 1000px;
     height: 600px;
-
-    
+    margin-left: 35%;
+    object-fit: cover;
 `;
 
 export const Container =styled.div`

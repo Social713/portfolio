@@ -56,7 +56,7 @@ export const NavMenu = styled.div`
     }
 `;
 
-export const NavMenuLinks = styled(Link)`
+export const NavLinks = styled(Link)`
     ${NavLink};
 `;
 
