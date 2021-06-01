@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import Button from './Button';
 import {Nav, Logo, MenuBars, NavMenu, NavLinks, NavBtn} from '../styles/NavbarStyles';
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle, toggleContactForm }) => {
     // color change on scroll
     const [navbar, setNavbar] = useState('transparent');
     //const [underline, setUnderline] = useState('none');
     const changeOnScroll =()=>{
-        window.scrollY >= 875 ? setNavbar('black') : setNavbar('transparent');
+        window.scrollY >= 800 ? setNavbar('black') : setNavbar('transparent');
         //window.scrollY >= 875 && setUnderline('underline');
     }
     window.addEventListener('scroll', changeOnScroll);
@@ -21,14 +21,14 @@ const Navbar = ({toggle}) => {
     
     const scrollToAbout=()=>{
         window.scrollTo({
-            top:880,
+            top:800,
             behavior: "smooth"
         });
     }
 
     const scrollToPortfolio=()=>{
         window.scrollTo({
-            top:1680,
+            top:1550,
             behavior: "smooth"
         });
     }
@@ -45,7 +45,7 @@ const Navbar = ({toggle}) => {
                     </NavLinks>
             </NavMenu>
             <NavBtn>
-                <Button to='/contact' primary='true'>Contact Me</Button>
+                <Button onClick={toggleContactForm} primary='true'>Contact Me</Button>
             </NavBtn>
         </Nav>
     );

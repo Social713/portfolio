@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import {Popup, Form} from '../styles/ConactFormStyles';
@@ -13,11 +14,12 @@ const useStyles = makeStyles((theme) => ({
         },
       }));
       
-const ContactForm = ({contact, contactToggle}) =>{
-        const classes = useStyles();
-    return (
-        <Popup contact={contact} onClick={contactToggle}>
-            <Form onClick={contactToggle}>
+const ContactForm = ({ contactOpen, toggleContactForm }) =>{
+    const classes = useStyles();
+    if (!contactOpen) return null;
+    return ReactDOM.createPortal(
+        <Popup onClick={toggleContactForm} >
+            <Form onClick={toggleContactForm} >
                 <form className={classes.root} noValidate autoComplete="off">
                     <TextField required id="standard-required" label="Name" defaultValue="" />
                     <TextField required id="standard-required" label="Email Address" defaultValue="" />
@@ -25,7 +27,8 @@ const ContactForm = ({contact, contactToggle}) =>{
                     <Button submit primary="true">Send</Button>
                 </form>  
             </Form>
-        </Popup>
+        </Popup>,
+        document.querySelector('#portal')
     )
 }
 

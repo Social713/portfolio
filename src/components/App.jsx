@@ -20,21 +20,21 @@ const App = () => {
     }
 
     // For the contact form
-    const [contact, setContact] = useState(false);
+    const [contactOpen, setContactOpen] = useState(false);
 
-    const contactToggle = () => {
-        setContact(!contact)
-    }
+    const toggleContactForm = () => {
+        setContactOpen(!contactOpen);
+    };
 
     return (
         <>
             <GlobalStyles />
-            <Navbar toggle={toggle}/>
+            <Navbar toggle={toggle} toggleContactForm={toggleContactForm} />
+            <ContactForm contactOpen={contactOpen} onClick={toggleContactForm} />
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero slides={SliderData}/>
             <InfoSection1 info = {InfoData} />
             <PortfolioSection info = {InfoData2}  />
-            <ContactForm contact={contact} contactToggle={contactToggle} />
             <Footer />
         </>
     )
