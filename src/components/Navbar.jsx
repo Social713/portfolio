@@ -7,7 +7,7 @@ const Navbar = ({toggle, toggleContactForm }) => {
     const [navbar, setNavbar] = useState('transparent');
     //const [underline, setUnderline] = useState('none');
     const changeOnScroll =()=>{
-        window.scrollY >= 800 ? setNavbar('black') : setNavbar('transparent');
+        window.scrollY >= 875 ? setNavbar('black') : setNavbar('transparent');
         //window.scrollY >= 875 && setUnderline('underline');
     }
     window.addEventListener('scroll', changeOnScroll);
@@ -21,14 +21,14 @@ const Navbar = ({toggle, toggleContactForm }) => {
     
     const scrollToAbout=()=>{
         window.scrollTo({
-            top:800,
+            top:880,
             behavior: "smooth"
         });
     }
 
     const scrollToPortfolio=()=>{
         window.scrollTo({
-            top:1550,
+            top:1680,
             behavior: "smooth"
         });
     }

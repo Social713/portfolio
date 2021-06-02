@@ -18,16 +18,18 @@ const ContactForm = ({ contactOpen, toggleContactForm }) =>{
     const classes = useStyles();
     if (!contactOpen) return null;
     return ReactDOM.createPortal(
-        <Popup onClick={toggleContactForm} >
-            <Form onClick={toggleContactForm} >
+        <>
+        {/* // overlay name change for popup */}
+        <Popup onClick={toggleContactForm} />
+            <Form >
                 <form className={classes.root} noValidate autoComplete="off">
                     <TextField required id="standard-required" label="Name" defaultValue="" />
                     <TextField required id="standard-required" label="Email Address" defaultValue="" />
                     <TextField required id="standard-multiline-static" label="Message" multiline rows={4} defaultValue="" />
-                    <Button submit primary="true">Send</Button>
+                    <Button onClick={toggleContactForm} primary="true">Send</Button>
                 </form>  
             </Form>
-        </Popup>,
+            </>,
         document.querySelector('#portal')
     )
 }

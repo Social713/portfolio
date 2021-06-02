@@ -23,6 +23,7 @@ const App = () => {
     const [contactOpen, setContactOpen] = useState(false);
 
     const toggleContactForm = () => {
+        console.log('clicked')
         setContactOpen(!contactOpen);
     };
 
@@ -30,7 +31,7 @@ const App = () => {
         <>
             <GlobalStyles />
             <Navbar toggle={toggle} toggleContactForm={toggleContactForm} />
-            <ContactForm contactOpen={contactOpen} onClick={toggleContactForm} />
+            <ContactForm contactOpen={contactOpen} toggleContactForm={toggleContactForm} />
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero slides={SliderData}/>
             <InfoSection1 info = {InfoData} />
