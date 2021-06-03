@@ -4,7 +4,7 @@ import { DropdownMenu, DropdownContainer, Icon, CloseIcon, DropdownWrappers, Dro
 import Button from './Button';
 
 
-const Dropdown = ({isOpen, toggle}) => {
+const Dropdown = ({isOpen, toggle, toggleContactForm}) => {
     return (
         <DropdownContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
@@ -20,7 +20,7 @@ const Dropdown = ({isOpen, toggle}) => {
                     )})}
                 </DropdownMenu>
                 <BtnWrap>
-                    <Button primary="true" round="true" big="true" to="/contact">Contact Me</Button>
+                    <Button onClick={toggleContactForm} primary="true" round="true" big="true">Contact Me</Button>
                 </BtnWrap>
             </DropdownWrappers>
         </DropdownContainer>

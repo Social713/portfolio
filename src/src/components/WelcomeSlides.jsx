@@ -8,18 +8,18 @@ const WelcomeSlides = ({slides}) => {
     const length = slides.length;
     const timeout = useRef(null);
 
-    // useEffect(()=>{
-    //     const nextSlide = () =>{
-    //         setCurrent(current => (current === length - 1 ? 0 : current +1))
-    //     }
-    //     timeout.current = setTimeout(nextSlide, 3000);
+    useEffect(()=>{
+        const nextSlide = () =>{
+            setCurrent(current => (current === length - 1 ? 0 : current +1))
+        }
+        timeout.current = setTimeout(nextSlide, 3000);
 
-    //     return () => {
-    //         if (timeout.current){
-    //             clearTimeout(timeout.current);
-    //         }
-    //     };
-    // }, [current, length]);
+        return () => {
+            if (timeout.current){
+                clearTimeout(timeout.current);
+            }
+        };
+    }, [current, length]);
 
     const nextSlide = () => {
         setCurrent(current === length-1 ? 0 : current + 1);
@@ -45,7 +45,7 @@ const WelcomeSlides = ({slides}) => {
                                 <HeroContent>
                                     <h1>{slide.name}</h1>
                                     <p>{slide.title}</p>
-                                    <Button to={slide.path} primary='true' css={`max-width: 160px;`}>
+                                    <Button onClick={slide.path} primary='true' css={`max-width: 160px;`}>
                                     {slide.label} <Arrow />
                                     </Button>   
                                 </HeroContent>

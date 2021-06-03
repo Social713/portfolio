@@ -5,7 +5,7 @@ import WelcomeSlides from './WelcomeSlides';
 import Navbar from './Navbar';
 import Dropdown from './Dropdown';
 import AboutMe from './AboutMe';
-import { InfoData, InfoData2 } from '../data/InfoData';
+import { InfoData, PortfolioData } from '../data/PortfolioData';
 import { Footer } from './Footer';
 import { PortfolioSection } from './PortfolioSection';
 import ContactForm from './ContactForm';
@@ -32,10 +32,10 @@ const App = () => {
             <GlobalStyles />
             <Navbar toggle={toggle} toggleContactForm={toggleContactForm} />
             <ContactForm contactOpen={contactOpen} toggleContactForm={toggleContactForm} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
+            <Dropdown isOpen={isOpen} toggle={toggle} toggleContactForm={toggleContactForm} />
             <WelcomeSlides slides={SliderData}/>
             <AboutMe info = {InfoData} />
-            <PortfolioSection info = {InfoData2}  />
+            <PortfolioSection info = {PortfolioData}  />
             <Footer />
         </>
     )

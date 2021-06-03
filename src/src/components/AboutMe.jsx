@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import Button from './Button';
 import {Section, Container, TextColumn, ImageColumn, ReactIcon, NodeIcon, JQueryIcon, MongoIcon, HtmlIcon, LogoTitle, JsIcon, CssIcon } from '../styles/InfoSectionStyles';
 import AOS from 'aos';
 import "aos/dist/aos.css";
@@ -8,7 +7,7 @@ import "aos/dist/aos.css";
 const AboutMe = ({info}) => {
     useEffect(() => {
         AOS.init({
-          duration : 2000
+          duration : 1000
         });
       }, []);
     return (
