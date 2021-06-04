@@ -26,4 +26,8 @@ const Button = styled(Link)`
     }
 `;
 
+export const button = styled.div`
+${Button}
+`;
+
 export default Button;

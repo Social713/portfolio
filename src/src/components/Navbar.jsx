@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from './Button';
 import { Nav, Logo, MenuBars, NavMenu, NavLinks, NavBtn } from '../styles/NavbarStyles';
-import { scrollToAbout, scrollToPortfolio, scrollToTop } from './functions/scroll.jsx';
+import { scrollToAbout, scrollToPortfolio, scrollToTop } from '../functions/scroll';
 
 
 const Navbar = ({toggle, toggleContactForm }) => {

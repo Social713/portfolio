@@ -12,7 +12,7 @@ const WelcomeSlides = ({slides}) => {
         const nextSlide = () =>{
             setCurrent(current => (current === length - 1 ? 0 : current +1))
         }
-        timeout.current = setTimeout(nextSlide, 3000);
+        timeout.current = setTimeout(nextSlide, 5000);
 
         return () => {
             if (timeout.current){

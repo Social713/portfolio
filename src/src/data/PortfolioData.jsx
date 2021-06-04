@@ -22,7 +22,7 @@ export const PortfolioData = [{
     paragraphOne: 'Helping a small business get off the ground and do what it loves.',
     image: BusinessPage,
     animation: "zoom-out-right",
-    technologies: ["HTML", "CSS"],
+    technologies: ["HTML ", "CSS"],
     link: "http://www.opulentbeautyandwellness.com/"
 },
 {
@@ -39,7 +39,7 @@ export const PortfolioData = [{
     paragraphOne: '	A card game in which the object is to accumulate cards with a higher count than that of the dealer but not exceeding 21. Try man vs computer!',
     image: BlackJack,
     animation: "zoom-out-left",
-    technologies: ["Javascript", "HTML", "CSS "],
+    technologies: ["Javascript ", "HTML ", "CSS "],
     link: "https://social713.github.io/blackjack/"
 },
 {
@@ -47,7 +47,7 @@ export const PortfolioData = [{
     paragraphOne: `Email users a newsletter using Mailchimp's API`,
     image: Newsletter,
     animation: "zoom-out-right",
-    technologies: ["Javascript", "HTML", "CSS", "Bootstrap"],
+    technologies: ["Javascript ", "HTML ", "CSS ", "Bootstrap"],
     link: "https://arcane-escarpment-26961.herokuapp.com/"
 },
 ];

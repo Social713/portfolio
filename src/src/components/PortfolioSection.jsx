@@ -15,6 +15,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -23,6 +24,7 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
+  
 });
 
 const Styles = styled.div`
@@ -50,6 +52,7 @@ const useStyles1 = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
+    listStyle: "none",
     flexWrap: "wrap",
     "& > *": {
       margin: theme.spacing(0.5),
@@ -58,6 +61,7 @@ const useStyles1 = makeStyles((theme) => ({
 }));
 
 export const PortfolioSection = ({ info }) => {
+
   const classes = useStyles();
   const classes1 = useStyles1();
 
@@ -66,6 +70,7 @@ export const PortfolioSection = ({ info }) => {
       duration: 1000,
     });
   }, []);
+
   return (
     <Styles>
       <Styles>
@@ -76,9 +81,12 @@ export const PortfolioSection = ({ info }) => {
             {info.map((data, index) => {
               return (
                 <Grid item>
-                  <Card key={index} className={classes.root} data-aos={data.animation}>
+                  <Card
+                    key={index}
+                    className={classes.root}
+                    data-aos={data.animation}
+                  >
                     <CardActionArea>
-
                       <a
                         href={data.link}
                         target={"_blank"}
@@ -99,27 +107,29 @@ export const PortfolioSection = ({ info }) => {
                             color="textSecondary"
                             component="p"
                           >
-                          
                             {data.paragraphOne}
                           </Typography>
                         </CardContent>
                       </a>
                     </CardActionArea>
 
-                    <CardActions>
-                      <div className={classes1.root}>
-                      
-                        <Chip label={data.technologies[index]} />
-                        
-                      </div>
-                    </CardActions>
+                        <CardActions>
+                          <div className={classes1.root}>
+                    {data.technologies.map((tech) => {
+                      return (
+                            <Chip label={tech} variant="outlined" />
+                      );
+                    })}
+                          </div>
+                        </CardActions>
                   </Card>
                 </Grid>
-              );  
+              );
             })}
           </Grid>
         </Box>
       </Styles>
+      ;
     </Styles>
   );
 };

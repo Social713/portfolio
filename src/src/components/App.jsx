@@ -10,6 +10,7 @@ import { Footer } from './Footer';
 import { PortfolioSection } from './PortfolioSection';
 import ContactForm from './ContactForm';
 
+
 const App = () => {
 
     // For the dropdown menu
@@ -23,7 +24,6 @@ const App = () => {
     const [contactOpen, setContactOpen] = useState(false);
 
     const toggleContactForm = () => {
-        console.log('clicked')
         setContactOpen(!contactOpen);
     };
 
@@ -35,7 +35,7 @@ const App = () => {
             <Dropdown isOpen={isOpen} toggle={toggle} toggleContactForm={toggleContactForm} />
             <WelcomeSlides slides={SliderData}/>
             <AboutMe info = {InfoData} />
-            <PortfolioSection info = {PortfolioData}  />
+            <PortfolioSection info = {PortfolioData} />
             <Footer />
         </>
     )

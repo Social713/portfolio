@@ -2,7 +2,7 @@ import Laptop from '../images/Laptop.jpeg';
 import SmallBusiness from '../images/SmallBusiness.jpeg';
 import BlackJack2 from '../images/BlackJack2.jpeg';
 import Blog from '../images/Blog.jpeg';
-import { scrollToAbout, scrollToPortfolio} from '../components/functions/scroll.jsx';
+import { scrollToAbout, scrollToPortfolio} from '../functions/scroll';
 
 export const SliderData = [
     {
