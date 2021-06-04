@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SiLinkedin from 'react-icons/si';
+// import SiLinkedin from 'react-icons/si';
 
 const Foot = styled.div`
     height: 75px;

@@ -1,101 +1,135 @@
-import React, {useEffect}from 'react';
-import styled from 'styled-components';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import AOS from 'aos';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import {
+  makeStyles,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Chip,
+  Grid,
+  Typography,
+  Box,
+} from "@material-ui/core";
+import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    minWidth: 200
+    minWidth: 200,
   },
   media: {
     height: 140,
   },
+  
 });
 
 const Styles = styled.div`
-    padding-bottom: 5%;
+  padding-bottom: 5%;
 
-    h1{
-        text-align: center;
-        padding-bottom: 7%;
-    }
-    p{
-        color: grey;
-        font-size: 14px;
-
-    }
+  h1 {
+    color: black;
+    text-align: center;
+    padding-bottom: 7%;
+  }
+  p {
+    color: grey;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+  }
 `;
 
-export const PortfolioSection =({info})=> {
+// For the Chips
+const useStyles1 = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    listStyle: "none",
+    flexWrap: "wrap",
+    "& > *": {
+      margin: theme.spacing(0.5),
+    },
+  },
+}));
+
+export const PortfolioSection = ({ info }) => {
+
   const classes = useStyles();
+  const classes1 = useStyles1();
+
   useEffect(() => {
     AOS.init({
-      duration : 1500
+      duration: 1000,
     });
   }, []);
+
   return (
-      <>
+    <Styles>
       <Styles>
-      <h1 id="portfolioSection">Portfolio</h1>
-      
-      <Box mb={15} ml={5} style={{display: 'inline-block'}}>
-      <Grid container spacing={4} >
-      {info.map((data)=>{
-        return( 
-      <Grid item >
-    <Card className={classes.root} data-aos={data.animation} >
+        <h1 id="portfolioSection">Portfolio</h1>
 
-      <CardActionArea>
-      {/* <ButtonBase
-          focusRipple
-          key={data.title}
-          className={classes.image}
-          focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: data.width,
-          }}
-        > */}
-        <CardMedia
-          className={classes.media}
-          image={data.image}
-          title={data.heading}
-        />
-            
-        <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-            {data.heading}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {data.paragraphOne}
-          </Typography>
-        </CardContent>
+        <Box mb={15} ml={5} style={{ display: "inline-block" }}>
+          <Grid container spacing={4}>
+            {info.map((data, index) => {
+              return (
+                <Grid item>
+                  <Card
+                    key={index}
+                    className={classes.root}
+                    data-aos={data.animation}
+                  >
+                    <CardActionArea>
+                      <a
+                        href={data.link}
+                        target={"_blank"}
+                        rel={"noopener noreferrer"}
+                      >
+                        <CardMedia
+                          className={classes.media}
+                          image={data.image}
+                          title={data.heading}
+                        />
 
-        {/* </ButtonBase> */}
-      </CardActionArea>
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="h2">
+                            {data.heading}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                          >
+                            {data.paragraphOne}
+                          </Typography>
+                        </CardContent>
+                      </a>
+                    </CardActionArea>
 
-      <CardActions>
-        <p>
-          {data.technologies}
-        </p>
-      </CardActions>
-    </Card>
-    
-    </Grid>
-        )})}
-    </Grid>
-    </Box>
+                        <CardActions>
+                          <div className={classes1.root}>
+                    {data.technologies.map((tech) => {
+                      return (
+                            <Chip label={tech} variant="outlined" />
+                      );
+                    })}
+                          </div>
+                        </CardActions>
+                  </Card>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
+      </Styles>
+      ;
     </Styles>
-    </>
   );
-}
+};

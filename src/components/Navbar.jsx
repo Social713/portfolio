@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import Button from './Button';
-import {Nav, Logo, MenuBars, NavMenu, NavLinks, NavBtn} from '../styles/NavbarStyles';
+import { Nav, Logo, MenuBars, NavMenu, NavLinks, NavBtn } from '../styles/NavbarStyles';
+import { scrollToAbout, scrollToPortfolio, scrollToTop } from '../functions/scroll';
+
 
 const Navbar = ({toggle, toggleContactForm }) => {
     // color change on scroll
@@ -12,26 +14,9 @@ const Navbar = ({toggle, toggleContactForm }) => {
     }
     window.addEventListener('scroll', changeOnScroll);
     
-    const scrollToTop=() =>{
-        window.scrollTo({
-            top:0,
-            behavior: "smooth"
-        });  
-    }
     
-    const scrollToAbout=()=>{
-        window.scrollTo({
-            top:880,
-            behavior: "smooth"
-        });
-    }
-
-    const scrollToPortfolio=()=>{
-        window.scrollTo({
-            top:1680,
-            behavior: "smooth"
-        });
-    }
+    
+    
     return (
         <Nav style={{background: navbar}}>
             <Logo onClick={scrollToTop}>DAVE</Logo>

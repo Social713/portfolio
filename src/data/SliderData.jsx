@@ -1,14 +1,14 @@
 import Laptop from '../images/Laptop.jpeg';
 import SmallBusiness from '../images/SmallBusiness.jpeg';
-import BlackJack from '../images/BlackJack.png';
+import BlackJack2 from '../images/BlackJack2.jpeg';
 import Blog from '../images/Blog.jpeg';
-
+import { scrollToAbout, scrollToPortfolio} from '../functions/scroll';
 
 export const SliderData = [
     {
         name: "David Rogers", 
         title: 'Software Engineer',
-        path: '/about',
+        path: scrollToAbout,
         label: 'Who am I?', 
         image: Laptop,
         alt: 'Picture of David'
@@ -16,7 +16,7 @@ export const SliderData = [
     {
         name: "Helping Businesses", 
         title: 'Go online',
-        path: '/business',
+        path: scrollToPortfolio,
         label: 'View Work', 
         image: SmallBusiness,
         alt: 'Picture of business page'
@@ -24,15 +24,15 @@ export const SliderData = [
     {
         name: "BlackJack", 
         title: 'Portfolio',
-        path: '/portfolio',
+        path: scrollToPortfolio,
         label: 'View Project', 
-        image: BlackJack,
+        image: BlackJack2,
         alt: 'Picture of Blackjack application'
     },
     {
         name: "Blog", 
         title: 'To share my journey',
-        path: '/portfolio',
+        path: scrollToPortfolio,
         label: 'Coming Soon', 
         image: Blog,
         alt: 'Picture of Blogsite'
