@@ -42,7 +42,7 @@ const Styles = styled.div`
   a {
     text-decoration: none;
   }
-  a:visited {
+  a:link, a:visited {
     color: black;
   }
 `;
